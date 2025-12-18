@@ -1,0 +1,134 @@
+//import { useSearchParams } from "react-router-dom";
+import { useMemo, useState } from "react";
+import cars from "./../data/cars.json";
+import CarCard from "./../components/CarCard";
+
+const unique = (arr: string[]) => Array.from(new Set(arr)).sort();
+
+const Cars = () => {
+  // const [searchParams] = useSearchParams();
+  // const search = searchParams.get("search")?.toLowerCase() || "";
+
+  const allCars = cars as any[];
+  const makes = unique(allCars.map((c) => c.make));
+  const fuels = unique(allCars.map((c) => c.fuel));
+  const transmissions = unique(allCars.map((c) => c.transmission));
+  const maxPrice = Math.max(...allCars.map((c) => c.price));
+  const maxMileage = Math.max(...allCars.map((c) => c.mileage));
+
+  const [make, setMake] = useState("All");
+  const [fuel, setFuel] = useState("All");
+  const [trans, setTrans] = useState("All");
+  const [price, setPrice] = useState(maxPrice);
+  const [mileage, setMileage] = useState(maxMileage);
+
+  // if (search) {
+  //   const filtered = cars.filter((car) =>
+  //     `${car.make} ${car.model} ${car.year}`.toLowerCase().includes(search)
+  //   );
+  // } else {
+  const filtered = useMemo(
+    () =>
+      allCars.filter((c) => {
+        const okMake = make === "All" || c.make === make;
+        const okFuel = fuel === "All" || c.fuel === fuel;
+        const okTrans = trans === "All" || c.transmission === trans;
+        return (
+          okMake &&
+          okFuel &&
+          okTrans &&
+          c.price <= price &&
+          c.mileage <= mileage
+        );
+      }),
+    [allCars, make, fuel, trans, price, mileage]
+  );
+  //}
+
+  return (
+    <main className="py-6">
+      <div className="bg-white border rounded-2xl p-4 shadow-sm mb-6">
+        <div className="mb-4">{/* <SearchBar /> */}</div>
+        <div className="grid md:grid-cols-5 gap-4">
+          <div>
+            <label className="text-xs text-gray-500">Make / Brand</label>
+            <select
+              value={make}
+              onChange={(e) => setMake(e.target.value)}
+              className="w-full mt-1 rounded-xl border px-3 py-2"
+            >
+              <option>All</option>
+              {makes.map((m) => (
+                <option key={m}>{m}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label className="text-xs text-gray-500">Fuel</label>
+            <select
+              value={fuel}
+              onChange={(e) => setFuel(e.target.value)}
+              className="w-full mt-1 rounded-xl border px-3 py-2"
+            >
+              <option>All</option>
+              {fuels.map((f) => (
+                <option key={f}>{f}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label className="text-xs text-gray-500">Transmission</label>
+            <select
+              value={trans}
+              onChange={(e) => setTrans(e.target.value)}
+              className="w-full mt-1 rounded-xl border px-3 py-2"
+            >
+              <option>All</option>
+              {transmissions.map((t) => (
+                <option key={t}>{t}</option>
+              ))}
+            </select>
+          </div>
+          <div>
+            <label className="text-xs text-gray-500 flex justify-between">
+              <span>Max Price</span>
+              <span className="text-gray-700">${price.toLocaleString()}</span>
+            </label>
+            <input
+              type="range"
+              min="0"
+              max={maxPrice}
+              step="500"
+              value={price}
+              onChange={(e) => setPrice(parseInt(e.target.value))}
+              className="w-full mt-2"
+            />
+          </div>
+          <div>
+            <label className="text-xs text-gray-500 flex justify-between">
+              <span>Max Mileage</span>
+              <span className="text-gray-700">
+                {mileage.toLocaleString()} mi
+              </span>
+            </label>
+            <input
+              type="range"
+              min="0"
+              max={maxMileage}
+              step="1000"
+              value={mileage}
+              onChange={(e) => setMileage(parseInt(e.target.value))}
+              className="w-full mt-2"
+            />
+          </div>
+        </div>
+      </div>
+      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+        {filtered.map((car) => (
+          <CarCard key={car.id} car={car} />
+        ))}
+      </div>
+    </main>
+  );
+};
+export default Cars;

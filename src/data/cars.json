@@ -1,0 +1,852 @@
+[
+  {
+    "id": 1,
+    "make": "Kia",
+    "model": "Sportage",
+    "year": 2020,
+    "price": 20122,
+    "mileage": 8777,
+    "fuel": "Gasoline",
+    "transmission": "Manual",
+    "location": "Frisco, TX",
+    "images": [
+      "https://picsum.photos/seed/Kia-Sportage-2020-0/800/480",
+      "https://picsum.photos/seed/Kia-Sportage-2020-1/800/480",
+      "https://picsum.photos/seed/Kia-Sportage-2020-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 2,
+    "make": "BMW",
+    "model": "5 Series",
+    "year": 2018,
+    "price": 16019,
+    "mileage": 41861,
+    "fuel": "Hybrid",
+    "transmission": "Manual",
+    "location": "Houston, TX",
+    "images": [
+      "https://picsum.photos/seed/BMW-5 Series-2018-0/800/480",
+      "https://picsum.photos/seed/BMW-5 Series-2018-1/800/480",
+      "https://picsum.photos/seed/BMW-5 Series-2018-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 3,
+    "make": "Hyundai",
+    "model": "Sonata",
+    "year": 2017,
+    "price": 28021,
+    "mileage": 47948,
+    "fuel": "Gasoline",
+    "transmission": "Manual",
+    "location": "Irving, TX",
+    "images": [
+      "https://picsum.photos/seed/Hyundai-Sonata-2017-0/800/480",
+      "https://picsum.photos/seed/Hyundai-Sonata-2017-1/800/480",
+      "https://picsum.photos/seed/Hyundai-Sonata-2017-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 4,
+    "make": "Hyundai",
+    "model": "Elantra",
+    "year": 2017,
+    "price": 24217,
+    "mileage": 121181,
+    "fuel": "Hybrid",
+    "transmission": "Automatic",
+    "location": "Plano, TX",
+    "images": [
+      "https://picsum.photos/seed/Hyundai-Elantra-2017-0/800/480",
+      "https://picsum.photos/seed/Hyundai-Elantra-2017-1/800/480",
+      "https://picsum.photos/seed/Hyundai-Elantra-2017-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 5,
+    "make": "Toyota",
+    "model": "Corolla",
+    "year": 2023,
+    "price": 37730,
+    "mileage": 143277,
+    "fuel": "Gasoline",
+    "transmission": "Manual",
+    "location": "Frisco, TX",
+    "images": [
+      "https://picsum.photos/seed/Toyota-Corolla-2023-0/800/480",
+      "https://picsum.photos/seed/Toyota-Corolla-2023-1/800/480",
+      "https://picsum.photos/seed/Toyota-Corolla-2023-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 6,
+    "make": "Kia",
+    "model": "Optima",
+    "year": 2022,
+    "price": 40849,
+    "mileage": 22729,
+    "fuel": "Electric",
+    "transmission": "Automatic",
+    "location": "Houston, TX",
+    "images": [
+      "https://picsum.photos/seed/Kia-Optima-2022-0/800/480",
+      "https://picsum.photos/seed/Kia-Optima-2022-1/800/480",
+      "https://picsum.photos/seed/Kia-Optima-2022-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 7,
+    "make": "Toyota",
+    "model": "Corolla",
+    "year": 2017,
+    "price": 36077,
+    "mileage": 86558,
+    "fuel": "Gasoline",
+    "transmission": "Automatic",
+    "location": "Dallas, TX",
+    "images": [
+      "https://picsum.photos/seed/Toyota-Corolla-2017-0/800/480",
+      "https://picsum.photos/seed/Toyota-Corolla-2017-1/800/480",
+      "https://picsum.photos/seed/Toyota-Corolla-2017-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 8,
+    "make": "Mercedes-Benz",
+    "model": "C-Class",
+    "year": 2021,
+    "price": 26730,
+    "mileage": 93473,
+    "fuel": "Hybrid",
+    "transmission": "Manual",
+    "location": "Austin, TX",
+    "images": [
+      "https://picsum.photos/seed/Mercedes-Benz-C-Class-2021-0/800/480",
+      "https://picsum.photos/seed/Mercedes-Benz-C-Class-2021-1/800/480",
+      "https://picsum.photos/seed/Mercedes-Benz-C-Class-2021-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 9,
+    "make": "Mercedes-Benz",
+    "model": "C-Class",
+    "year": 2022,
+    "price": 54259,
+    "mileage": 99029,
+    "fuel": "Diesel",
+    "transmission": "Manual",
+    "location": "Plano, TX",
+    "images": [
+      "https://picsum.photos/seed/Mercedes-Benz-C-Class-2022-0/800/480",
+      "https://picsum.photos/seed/Mercedes-Benz-C-Class-2022-1/800/480",
+      "https://picsum.photos/seed/Mercedes-Benz-C-Class-2022-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 10,
+    "make": "Hyundai",
+    "model": "Santa Fe",
+    "year": 2021,
+    "price": 42038,
+    "mileage": 92991,
+    "fuel": "Electric",
+    "transmission": "Manual",
+    "location": "Dallas, TX",
+    "images": [
+      "https://picsum.photos/seed/Hyundai-Santa Fe-2021-0/800/480",
+      "https://picsum.photos/seed/Hyundai-Santa Fe-2021-1/800/480",
+      "https://picsum.photos/seed/Hyundai-Santa Fe-2021-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 11,
+    "make": "Volkswagen",
+    "model": "Tiguan",
+    "year": 2021,
+    "price": 60392,
+    "mileage": 63548,
+    "fuel": "Electric",
+    "transmission": "Manual",
+    "location": "Dallas, TX",
+    "images": [
+      "https://picsum.photos/seed/Volkswagen-Tiguan-2021-0/800/480",
+      "https://picsum.photos/seed/Volkswagen-Tiguan-2021-1/800/480",
+      "https://picsum.photos/seed/Volkswagen-Tiguan-2021-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 12,
+    "make": "Toyota",
+    "model": "RAV4",
+    "year": 2018,
+    "price": 41704,
+    "mileage": 122915,
+    "fuel": "Diesel",
+    "transmission": "Automatic",
+    "location": "San Antonio, TX",
+    "images": [
+      "https://picsum.photos/seed/Toyota-RAV4-2018-0/800/480",
+      "https://picsum.photos/seed/Toyota-RAV4-2018-1/800/480",
+      "https://picsum.photos/seed/Toyota-RAV4-2018-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 13,
+    "make": "Toyota",
+    "model": "RAV4",
+    "year": 2017,
+    "price": 10075,
+    "mileage": 97589,
+    "fuel": "Hybrid",
+    "transmission": "Automatic",
+    "location": "Frisco, TX",
+    "images": [
+      "https://picsum.photos/seed/Toyota-RAV4-2017-0/800/480",
+      "https://picsum.photos/seed/Toyota-RAV4-2017-1/800/480",
+      "https://picsum.photos/seed/Toyota-RAV4-2017-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 14,
+    "make": "Toyota",
+    "model": "Highlander",
+    "year": 2022,
+    "price": 16928,
+    "mileage": 105836,
+    "fuel": "Gasoline",
+    "transmission": "Automatic",
+    "location": "Frisco, TX",
+    "images": [
+      "https://picsum.photos/seed/Toyota-Highlander-2022-0/800/480",
+      "https://picsum.photos/seed/Toyota-Highlander-2022-1/800/480",
+      "https://picsum.photos/seed/Toyota-Highlander-2022-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 15,
+    "make": "Mazda",
+    "model": "CX-30",
+    "year": 2019,
+    "price": 52462,
+    "mileage": 78974,
+    "fuel": "Gasoline",
+    "transmission": "Manual",
+    "location": "San Antonio, TX",
+    "images": [
+      "https://picsum.photos/seed/Mazda-CX-30-2019-0/800/480",
+      "https://picsum.photos/seed/Mazda-CX-30-2019-1/800/480",
+      "https://picsum.photos/seed/Mazda-CX-30-2019-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 16,
+    "make": "Audi",
+    "model": "Q7",
+    "year": 2018,
+    "price": 25580,
+    "mileage": 5540,
+    "fuel": "Gasoline",
+    "transmission": "Manual",
+    "location": "Plano, TX",
+    "images": [
+      "https://picsum.photos/seed/Audi-Q7-2018-0/800/480",
+      "https://picsum.photos/seed/Audi-Q7-2018-1/800/480",
+      "https://picsum.photos/seed/Audi-Q7-2018-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 17,
+    "make": "Chevrolet",
+    "model": "Malibu",
+    "year": 2024,
+    "price": 57756,
+    "mileage": 52507,
+    "fuel": "Electric",
+    "transmission": "Manual",
+    "location": "San Antonio, TX",
+    "images": [
+      "https://picsum.photos/seed/Chevrolet-Malibu-2024-0/800/480",
+      "https://picsum.photos/seed/Chevrolet-Malibu-2024-1/800/480",
+      "https://picsum.photos/seed/Chevrolet-Malibu-2024-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 18,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "year": 2018,
+    "price": 52922,
+    "mileage": 14229,
+    "fuel": "Diesel",
+    "transmission": "Manual",
+    "location": "Austin, TX",
+    "images": [
+      "https://picsum.photos/seed/Subaru-Crosstrek-2018-0/800/480",
+      "https://picsum.photos/seed/Subaru-Crosstrek-2018-1/800/480",
+      "https://picsum.photos/seed/Subaru-Crosstrek-2018-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 19,
+    "make": "Kia",
+    "model": "Forte",
+    "year": 2020,
+    "price": 37018,
+    "mileage": 107880,
+    "fuel": "Electric",
+    "transmission": "Manual",
+    "location": "San Antonio, TX",
+    "images": [
+      "https://picsum.photos/seed/Kia-Forte-2020-0/800/480",
+      "https://picsum.photos/seed/Kia-Forte-2020-1/800/480",
+      "https://picsum.photos/seed/Kia-Forte-2020-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 20,
+    "make": "Kia",
+    "model": "Sportage",
+    "year": 2019,
+    "price": 20718,
+    "mileage": 102765,
+    "fuel": "Hybrid",
+    "transmission": "Manual",
+    "location": "Houston, TX",
+    "images": [
+      "https://picsum.photos/seed/Kia-Sportage-2019-0/800/480",
+      "https://picsum.photos/seed/Kia-Sportage-2019-1/800/480",
+      "https://picsum.photos/seed/Kia-Sportage-2019-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 21,
+    "make": "Hyundai",
+    "model": "Sonata",
+    "year": 2023,
+    "price": 56191,
+    "mileage": 115002,
+    "fuel": "Hybrid",
+    "transmission": "Automatic",
+    "location": "Irving, TX",
+    "images": [
+      "https://picsum.photos/seed/Hyundai-Sonata-2023-0/800/480",
+      "https://picsum.photos/seed/Hyundai-Sonata-2023-1/800/480",
+      "https://picsum.photos/seed/Hyundai-Sonata-2023-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 22,
+    "make": "Hyundai",
+    "model": "Tucson",
+    "year": 2015,
+    "price": 20148,
+    "mileage": 29879,
+    "fuel": "Electric",
+    "transmission": "Manual",
+    "location": "Frisco, TX",
+    "images": [
+      "https://picsum.photos/seed/Hyundai-Tucson-2015-0/800/480",
+      "https://picsum.photos/seed/Hyundai-Tucson-2015-1/800/480",
+      "https://picsum.photos/seed/Hyundai-Tucson-2015-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 23,
+    "make": "Nissan",
+    "model": "Rogue",
+    "year": 2020,
+    "price": 37630,
+    "mileage": 39792,
+    "fuel": "Electric",
+    "transmission": "Automatic",
+    "location": "Plano, TX",
+    "images": [
+      "https://picsum.photos/seed/Nissan-Rogue-2020-0/800/480",
+      "https://picsum.photos/seed/Nissan-Rogue-2020-1/800/480",
+      "https://picsum.photos/seed/Nissan-Rogue-2020-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 24,
+    "make": "Mazda",
+    "model": "CX-5",
+    "year": 2019,
+    "price": 18746,
+    "mileage": 92746,
+    "fuel": "Gasoline",
+    "transmission": "Automatic",
+    "location": "Austin, TX",
+    "images": [
+      "https://picsum.photos/seed/Mazda-CX-5-2019-0/800/480",
+      "https://picsum.photos/seed/Mazda-CX-5-2019-1/800/480",
+      "https://picsum.photos/seed/Mazda-CX-5-2019-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 25,
+    "make": "Ford",
+    "model": "F-150",
+    "year": 2018,
+    "price": 30104,
+    "mileage": 149740,
+    "fuel": "Electric",
+    "transmission": "Manual",
+    "location": "Austin, TX",
+    "images": [
+      "https://picsum.photos/seed/Ford-F-150-2018-0/800/480",
+      "https://picsum.photos/seed/Ford-F-150-2018-1/800/480",
+      "https://picsum.photos/seed/Ford-F-150-2018-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 26,
+    "make": "Chevrolet",
+    "model": "Malibu",
+    "year": 2021,
+    "price": 59961,
+    "mileage": 114782,
+    "fuel": "Gasoline",
+    "transmission": "Manual",
+    "location": "San Antonio, TX",
+    "images": [
+      "https://picsum.photos/seed/Chevrolet-Malibu-2021-0/800/480",
+      "https://picsum.photos/seed/Chevrolet-Malibu-2021-1/800/480",
+      "https://picsum.photos/seed/Chevrolet-Malibu-2021-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 27,
+    "make": "Chevrolet",
+    "model": "Equinox",
+    "year": 2016,
+    "price": 33881,
+    "mileage": 18933,
+    "fuel": "Gasoline",
+    "transmission": "Automatic",
+    "location": "Austin, TX",
+    "images": [
+      "https://picsum.photos/seed/Chevrolet-Equinox-2016-0/800/480",
+      "https://picsum.photos/seed/Chevrolet-Equinox-2016-1/800/480",
+      "https://picsum.photos/seed/Chevrolet-Equinox-2016-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 28,
+    "make": "Toyota",
+    "model": "Corolla",
+    "year": 2023,
+    "price": 59756,
+    "mileage": 88571,
+    "fuel": "Electric",
+    "transmission": "Manual",
+    "location": "Frisco, TX",
+    "images": [
+      "https://picsum.photos/seed/Toyota-Corolla-2023-0/800/480",
+      "https://picsum.photos/seed/Toyota-Corolla-2023-1/800/480",
+      "https://picsum.photos/seed/Toyota-Corolla-2023-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 29,
+    "make": "Mazda",
+    "model": "CX-30",
+    "year": 2021,
+    "price": 15935,
+    "mileage": 63365,
+    "fuel": "Gasoline",
+    "transmission": "Manual",
+    "location": "Austin, TX",
+    "images": [
+      "https://picsum.photos/seed/Mazda-CX-30-2021-0/800/480",
+      "https://picsum.photos/seed/Mazda-CX-30-2021-1/800/480",
+      "https://picsum.photos/seed/Mazda-CX-30-2021-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 30,
+    "make": "Mazda",
+    "model": "CX-5",
+    "year": 2019,
+    "price": 32809,
+    "mileage": 83474,
+    "fuel": "Diesel",
+    "transmission": "Manual",
+    "location": "Irving, TX",
+    "images": [
+      "https://picsum.photos/seed/Mazda-CX-5-2019-0/800/480",
+      "https://picsum.photos/seed/Mazda-CX-5-2019-1/800/480",
+      "https://picsum.photos/seed/Mazda-CX-5-2019-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 31,
+    "make": "Honda",
+    "model": "Accord",
+    "year": 2020,
+    "price": 61478,
+    "mileage": 136711,
+    "fuel": "Electric",
+    "transmission": "Automatic",
+    "location": "San Antonio, TX",
+    "images": [
+      "https://picsum.photos/seed/Honda-Accord-2020-0/800/480",
+      "https://picsum.photos/seed/Honda-Accord-2020-1/800/480",
+      "https://picsum.photos/seed/Honda-Accord-2020-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 32,
+    "make": "Hyundai",
+    "model": "Santa Fe",
+    "year": 2016,
+    "price": 32416,
+    "mileage": 61497,
+    "fuel": "Hybrid",
+    "transmission": "Manual",
+    "location": "Dallas, TX",
+    "images": [
+      "https://picsum.photos/seed/Hyundai-Santa Fe-2016-0/800/480",
+      "https://picsum.photos/seed/Hyundai-Santa Fe-2016-1/800/480",
+      "https://picsum.photos/seed/Hyundai-Santa Fe-2016-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 33,
+    "make": "Kia",
+    "model": "Sportage",
+    "year": 2021,
+    "price": 15660,
+    "mileage": 79174,
+    "fuel": "Gasoline",
+    "transmission": "Manual",
+    "location": "Irving, TX",
+    "images": [
+      "https://picsum.photos/seed/Kia-Sportage-2021-0/800/480",
+      "https://picsum.photos/seed/Kia-Sportage-2021-1/800/480",
+      "https://picsum.photos/seed/Kia-Sportage-2021-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 34,
+    "make": "Audi",
+    "model": "Q5",
+    "year": 2019,
+    "price": 62705,
+    "mileage": 145550,
+    "fuel": "Diesel",
+    "transmission": "Manual",
+    "location": "Dallas, TX",
+    "images": [
+      "https://picsum.photos/seed/Audi-Q5-2019-0/800/480",
+      "https://picsum.photos/seed/Audi-Q5-2019-1/800/480",
+      "https://picsum.photos/seed/Audi-Q5-2019-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 35,
+    "make": "Subaru",
+    "model": "Crosstrek",
+    "year": 2018,
+    "price": 29062,
+    "mileage": 8257,
+    "fuel": "Diesel",
+    "transmission": "Manual",
+    "location": "Austin, TX",
+    "images": [
+      "https://picsum.photos/seed/Subaru-Crosstrek-2018-0/800/480",
+      "https://picsum.photos/seed/Subaru-Crosstrek-2018-1/800/480",
+      "https://picsum.photos/seed/Subaru-Crosstrek-2018-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 36,
+    "make": "Audi",
+    "model": "Q7",
+    "year": 2023,
+    "price": 43826,
+    "mileage": 88291,
+    "fuel": "Diesel",
+    "transmission": "Automatic",
+    "location": "Austin, TX",
+    "images": [
+      "https://picsum.photos/seed/Audi-Q7-2023-0/800/480",
+      "https://picsum.photos/seed/Audi-Q7-2023-1/800/480",
+      "https://picsum.photos/seed/Audi-Q7-2023-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 37,
+    "make": "Hyundai",
+    "model": "Sonata",
+    "year": 2020,
+    "price": 46103,
+    "mileage": 138997,
+    "fuel": "Hybrid",
+    "transmission": "Automatic",
+    "location": "Austin, TX",
+    "images": [
+      "https://picsum.photos/seed/Hyundai-Sonata-2020-0/800/480",
+      "https://picsum.photos/seed/Hyundai-Sonata-2020-1/800/480",
+      "https://picsum.photos/seed/Hyundai-Sonata-2020-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 38,
+    "make": "Toyota",
+    "model": "Camry",
+    "year": 2019,
+    "price": 49768,
+    "mileage": 127163,
+    "fuel": "Gasoline",
+    "transmission": "Manual",
+    "location": "San Antonio, TX",
+    "images": [
+      "https://picsum.photos/seed/Toyota-Camry-2019-0/800/480",
+      "https://picsum.photos/seed/Toyota-Camry-2019-1/800/480",
+      "https://picsum.photos/seed/Toyota-Camry-2019-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 39,
+    "make": "Ford",
+    "model": "Escape",
+    "year": 2016,
+    "price": 42058,
+    "mileage": 85843,
+    "fuel": "Electric",
+    "transmission": "Manual",
+    "location": "Irving, TX",
+    "images": [
+      "https://picsum.photos/seed/Ford-Escape-2016-0/800/480",
+      "https://picsum.photos/seed/Ford-Escape-2016-1/800/480",
+      "https://picsum.photos/seed/Ford-Escape-2016-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 40,
+    "make": "Ford",
+    "model": "Mustang",
+    "year": 2018,
+    "price": 52578,
+    "mileage": 70879,
+    "fuel": "Diesel",
+    "transmission": "Automatic",
+    "location": "Houston, TX",
+    "images": [
+      "https://picsum.photos/seed/Ford-Mustang-2018-0/800/480",
+      "https://picsum.photos/seed/Ford-Mustang-2018-1/800/480",
+      "https://picsum.photos/seed/Ford-Mustang-2018-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 41,
+    "make": "Volkswagen",
+    "model": "Passat",
+    "year": 2015,
+    "price": 40225,
+    "mileage": 71485,
+    "fuel": "Diesel",
+    "transmission": "Manual",
+    "location": "Austin, TX",
+    "images": [
+      "https://picsum.photos/seed/Volkswagen-Passat-2015-0/800/480",
+      "https://picsum.photos/seed/Volkswagen-Passat-2015-1/800/480",
+      "https://picsum.photos/seed/Volkswagen-Passat-2015-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 42,
+    "make": "Honda",
+    "model": "Accord",
+    "year": 2016,
+    "price": 18794,
+    "mileage": 94587,
+    "fuel": "Diesel",
+    "transmission": "Manual",
+    "location": "Houston, TX",
+    "images": [
+      "https://picsum.photos/seed/Honda-Accord-2016-0/800/480",
+      "https://picsum.photos/seed/Honda-Accord-2016-1/800/480",
+      "https://picsum.photos/seed/Honda-Accord-2016-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 43,
+    "make": "Hyundai",
+    "model": "Sonata",
+    "year": 2016,
+    "price": 41305,
+    "mileage": 25016,
+    "fuel": "Hybrid",
+    "transmission": "Automatic",
+    "location": "Frisco, TX",
+    "images": [
+      "https://picsum.photos/seed/Hyundai-Sonata-2016-0/800/480",
+      "https://picsum.photos/seed/Hyundai-Sonata-2016-1/800/480",
+      "https://picsum.photos/seed/Hyundai-Sonata-2016-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 44,
+    "make": "Chevrolet",
+    "model": "Malibu",
+    "year": 2022,
+    "price": 62732,
+    "mileage": 126628,
+    "fuel": "Hybrid",
+    "transmission": "Manual",
+    "location": "Dallas, TX",
+    "images": [
+      "https://picsum.photos/seed/Chevrolet-Malibu-2022-0/800/480",
+      "https://picsum.photos/seed/Chevrolet-Malibu-2022-1/800/480",
+      "https://picsum.photos/seed/Chevrolet-Malibu-2022-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 45,
+    "make": "Honda",
+    "model": "Civic",
+    "year": 2022,
+    "price": 51319,
+    "mileage": 117200,
+    "fuel": "Hybrid",
+    "transmission": "Manual",
+    "location": "Irving, TX",
+    "images": [
+      "https://picsum.photos/seed/Honda-Civic-2022-0/800/480",
+      "https://picsum.photos/seed/Honda-Civic-2022-1/800/480",
+      "https://picsum.photos/seed/Honda-Civic-2022-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 46,
+    "make": "Chevrolet",
+    "model": "Equinox",
+    "year": 2016,
+    "price": 25697,
+    "mileage": 57782,
+    "fuel": "Hybrid",
+    "transmission": "Automatic",
+    "location": "Frisco, TX",
+    "images": [
+      "https://picsum.photos/seed/Chevrolet-Equinox-2016-0/800/480",
+      "https://picsum.photos/seed/Chevrolet-Equinox-2016-1/800/480",
+      "https://picsum.photos/seed/Chevrolet-Equinox-2016-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 47,
+    "make": "Kia",
+    "model": "Forte",
+    "year": 2022,
+    "price": 62077,
+    "mileage": 91803,
+    "fuel": "Gasoline",
+    "transmission": "Automatic",
+    "location": "Houston, TX",
+    "images": [
+      "https://picsum.photos/seed/Kia-Forte-2022-0/800/480",
+      "https://picsum.photos/seed/Kia-Forte-2022-1/800/480",
+      "https://picsum.photos/seed/Kia-Forte-2022-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 48,
+    "make": "BMW",
+    "model": "X5",
+    "year": 2023,
+    "price": 28886,
+    "mileage": 106232,
+    "fuel": "Electric",
+    "transmission": "Automatic",
+    "location": "Dallas, TX",
+    "images": [
+      "https://picsum.photos/seed/BMW-X5-2023-0/800/480",
+      "https://picsum.photos/seed/BMW-X5-2023-1/800/480",
+      "https://picsum.photos/seed/BMW-X5-2023-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 49,
+    "make": "Toyota",
+    "model": "Highlander",
+    "year": 2017,
+    "price": 25197,
+    "mileage": 111056,
+    "fuel": "Diesel",
+    "transmission": "Automatic",
+    "location": "Houston, TX",
+    "images": [
+      "https://picsum.photos/seed/Toyota-Highlander-2017-0/800/480",
+      "https://picsum.photos/seed/Toyota-Highlander-2017-1/800/480",
+      "https://picsum.photos/seed/Toyota-Highlander-2017-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  },
+  {
+    "id": 50,
+    "make": "Subaru",
+    "model": "Forester",
+    "year": 2019,
+    "price": 35659,
+    "mileage": 72480,
+    "fuel": "Electric",
+    "transmission": "Manual",
+    "location": "Dallas, TX",
+    "images": [
+      "https://picsum.photos/seed/Subaru-Forester-2019-0/800/480",
+      "https://picsum.photos/seed/Subaru-Forester-2019-1/800/480",
+      "https://picsum.photos/seed/Subaru-Forester-2019-2/800/480",
+      "https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=1200&q=80&auto=format"
+    ]
+  }
+]

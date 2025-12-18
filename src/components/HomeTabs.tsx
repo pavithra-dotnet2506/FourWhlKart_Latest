@@ -1,0 +1,97 @@
+import { useState } from "react";
+import CarCard from "./CarCard";
+import allCars from "./../data/cars.json";
+//import { useFavorites } from "./../context/FavoritesContext";
+
+//type Tab = "viewed" | "favorites" | "searched" | "recommended";
+type Tab = "viewed" | "favorites" | "searched" | "recommended";
+
+const HomeTabs = () => {
+  const [activeTab, setActiveTab] = useState<Tab>("viewed");
+  const cars = allCars as any[];
+  //const { favorites } = useFavorites();
+  //const favCars = (cars as any[]).filter((c) => favorites.includes(c.id));
+  const viewedCars = cars.slice(0, 4);
+  //const favoriteCars = cars.slice(4, 8);
+  //   const searchedCars = cars.slice(8, 12);
+  //   const recommendedCars = cars.slice(12, 16);
+  const searchedCars = cars.slice(4, 8);
+  const recommendedCars = cars.slice(8, 12);
+
+  const getCars = () => {
+    switch (activeTab) {
+      case "viewed":
+        return viewedCars;
+      //   case "favorites":
+      //     return favoriteCars;
+      case "searched":
+        return searchedCars;
+      case "recommended":
+        return recommendedCars;
+    }
+  };
+
+  return (
+    <section className="max-w-7xl mx-auto px-4 mt-12">
+      {/* Tabs */}
+      <div className="flex gap-6 border-b">
+        <TabButton
+          label="Viewed"
+          active={activeTab === "viewed"}
+          onClick={() => setActiveTab("viewed")}
+        />
+        {/* <TabButton
+          label="Favorites"
+          active={activeTab === "favorites"}
+          onClick={() => setActiveTab("favorites")}
+        /> */}
+        <TabButton
+          label="Searched"
+          active={activeTab === "searched"}
+          onClick={() => setActiveTab("searched")}
+        />
+        <TabButton
+          label="You Might Like"
+          active={activeTab === "recommended"}
+          onClick={() => setActiveTab("recommended")}
+        />
+      </div>
+
+      {/* Content */}
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-6">
+        {getCars().map((car) => (
+          <CarCard key={car.id} car={car} />
+        ))}
+        {/* {favCars.map((car) => (
+          <CarCard key={car.id} car={car} />
+        ))} */}
+      </div>
+    </section>
+  );
+};
+
+function TabButton({
+  label,
+  active,
+  onClick,
+}: {
+  label: string;
+  active: boolean;
+  onClick: () => void;
+}) {
+  return (
+    <button
+      onClick={onClick}
+      className={`pb-3 text-sm font-semibold transition
+        ${
+          active
+            ? "border-b-2 border-red-600 text-red-600"
+            : "text-gray-500 hover:text-gray-800"
+        }
+      `}
+    >
+      {label}
+    </button>
+  );
+}
+export default HomeTabs;
