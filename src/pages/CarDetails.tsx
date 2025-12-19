@@ -66,6 +66,14 @@ const CarDetails = () => {
             {isFav ? "♥" : "♡"}
           </button>
         </div>
+        <Link
+          // to={`/cars/${car.id}`}
+          to=""
+          //className="mt-auto inline-flex justify-center rounded-xl bg-gray-900 text-white px-4 py-2 hover:bg-gray-800"
+          className=" rounded-full bg-sky-500 grid place-items-center text-white font-bold"
+        >
+          Buy
+        </Link>
       </div>
     </main>
   );
