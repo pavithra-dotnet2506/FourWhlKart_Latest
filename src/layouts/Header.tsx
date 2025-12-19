@@ -30,9 +30,12 @@ const Header = () => {
             <NavLink to="/cars" className={linkCls}>
               Cars
             </NavLink>
-            <NavLink to="/favorites" className={linkCls}>
+            {/* <NavLink to="/favorites" className={linkCls}>
               Favorites
             </NavLink>
+            <NavLink to="/recentlyViewed" className={linkCls}>
+              Recently Viewed
+            </NavLink> */}
             <NavLink to="/about" className={linkCls}>
               About
             </NavLink>
@@ -81,7 +84,7 @@ const Header = () => {
                   <nav className="flex flex-col gap-4">
                     <a href="/">Home</a>
                     <a href="/cars">Cars</a>
-                    <a href="/favorites">Favorites</a>
+                    {/* <a href="/favorites">Favorites</a> */}
                     <a href="/about">About</a>
                     <a href="/contact">Contact</a>
                   </nav>

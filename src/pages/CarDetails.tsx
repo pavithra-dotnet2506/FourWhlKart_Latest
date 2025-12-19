@@ -4,11 +4,23 @@ import ImageCarousel from "./../components/ImageCarousel";
 import { useFavorites } from "./../context/FavoritesContext";
 import { useToast } from "./../components/ToastProvider";
 
+import { useDispatch } from "react-redux";
+import { addRecentlyViewed } from "./../store/recentlyViewedSlice";
+import { useNavigate } from "react-router-dom";
+
 const CarDetails = () => {
+  console.log("Pages >> Car details : ");
   const { id } = useParams();
   const car = (cars as any[]).find((c) => String(c.id) === String(id));
   const { favorites, toggleFavorite } = useFavorites();
   const { addToast } = useToast();
+
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  //nsole.log("Pages >> Car details : " + car.make);
+
+  dispatch(addRecentlyViewed(car));
 
   if (!car) {
     return (

@@ -1,29 +1,39 @@
 import { useState } from "react";
 import CarCard from "./CarCard";
 import allCars from "./../data/cars.json";
-//import { useFavorites } from "./../context/FavoritesContext";
+import RecentlyViewed from "@/components/RecentlyViewed";
+import { useFavorites } from "./../context/FavoritesContext";
 
-//type Tab = "viewed" | "favorites" | "searched" | "recommended";
+import { useSelector } from "react-redux";
+import type { RootState } from "../store";
+
 type Tab = "viewed" | "favorites" | "searched" | "recommended";
+//type Tab = "viewed" | "searched" | "recommended";
 
 const HomeTabs = () => {
   const [activeTab, setActiveTab] = useState<Tab>("viewed");
   const cars = allCars as any[];
-  //const { favorites } = useFavorites();
-  //const favCars = (cars as any[]).filter((c) => favorites.includes(c.id));
-  const viewedCars = cars.slice(0, 4);
-  //const favoriteCars = cars.slice(4, 8);
-  //   const searchedCars = cars.slice(8, 12);
-  //   const recommendedCars = cars.slice(12, 16);
-  const searchedCars = cars.slice(4, 8);
-  const recommendedCars = cars.slice(8, 12);
+  const recentlyViewedCars = useSelector(
+    (state: RootState) => state.recentlyViewed
+  );
+  const { favorites } = useFavorites();
+  const favCars = (cars as any[]).filter((c) => favorites.includes(c.id));
+
+  const viewedCars = recentlyViewedCars.slice(0, 4);
+  //console.log("**favCars** >> " + favCars[0].make);
+
+  const favoriteCars = favCars.slice(0, 4);
+  const searchedCars = cars.slice(8, 12);
+  const recommendedCars = cars.slice(12, 16);
+  // const searchedCars = cars.slice(4, 8);
+  // const recommendedCars = cars.slice(8, 12);
 
   const getCars = () => {
     switch (activeTab) {
       case "viewed":
         return viewedCars;
-      //   case "favorites":
-      //     return favoriteCars;
+      case "favorites":
+        return favoriteCars;
       case "searched":
         return searchedCars;
       case "recommended":
@@ -40,11 +50,11 @@ const HomeTabs = () => {
           active={activeTab === "viewed"}
           onClick={() => setActiveTab("viewed")}
         />
-        {/* <TabButton
+        <TabButton
           label="Favorites"
           active={activeTab === "favorites"}
           onClick={() => setActiveTab("favorites")}
-        /> */}
+        />
         <TabButton
           label="Searched"
           active={activeTab === "searched"}
@@ -62,6 +72,11 @@ const HomeTabs = () => {
         {getCars().map((car) => (
           <CarCard key={car.id} car={car} />
         ))}
+
+        {/* {getCars.length > 0
+          ? getCars().map((car) => <CarCard key={car.id} car={car} />)
+          : "No Cars to display"} */}
+
         {/* {favCars.map((car) => (
           <CarCard key={car.id} car={car} />
         ))} */}

@@ -3,6 +3,7 @@ import SearchBar from "./../components/SearchBar";
 import CarCard from "./../components/CarCard";
 import cars from "./../data/cars.json";
 import HomeTabs from "./../components/HomeTabs";
+import RecentlyViewed from "./../components/RecentlyViewed";
 
 const Home = () => {
   const [q, setQ] = useState("");
@@ -26,6 +27,7 @@ const Home = () => {
       </div> */}
       {/* Hero Section */}
       <HomeTabs />
+      {/* <RecentlyViewed /> */}
     </main>
   );
 };
