@@ -5,7 +5,8 @@ import { useFavorites } from "./../context/FavoritesContext";
 import { useToast } from "./../components/ToastProvider";
 
 import { useDispatch } from "react-redux";
-import { addRecentlyViewed } from "@/store/recentlyViewedSlice";
+//import { addRecentlyViewed } from "@/store/recentlyViewedSlice";
+import { addRecentlyViewed } from "../store/recentlyViewedSlice";
 import { useNavigate } from "react-router-dom";
 
 const CarDetails = () => {

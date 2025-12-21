@@ -16,6 +16,9 @@ import { Provider } from "react-redux";
 import { store } from "./store";
 import "./index.css";
 import RecentlyViewed from "./components/RecentlyViewed";
+//import { Toaster } from "./components/ui/toaster";
+//import Contact from "@/pages/Contact";
+//import { Contact } from "./pages/Contact";
 
 const router = createBrowserRouter([
   {
@@ -37,6 +40,7 @@ ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <Provider store={store}>
       <RouterProvider router={router} />
+      {/* <Toaster /> */}
     </Provider>
   </React.StrictMode>
 );
