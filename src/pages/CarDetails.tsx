@@ -4,21 +4,43 @@ import ImageCarousel from "./../components/ImageCarousel";
 import { useFavorites } from "./../context/FavoritesContext";
 import { useToast } from "./../components/ToastProvider";
 
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { addRecentlyViewed } from "./../store/recentlyViewedSlice";
 import { useNavigate } from "react-router-dom";
 
-const CarDetails = () => {
-  console.log("Pages >> Car details : ");
-  const { id } = useParams();
-  const car = (cars as any[]).find((c) => String(c.id) === String(id));
-  const { favorites, toggleFavorite } = useFavorites();
-  const { addToast } = useToast();
+import type { RootState } from "./../store";
+import { removeFavorite, addFavorite } from "./../store/favoritesSlice";
+import { Button } from "./../components/ui/button";
+import { Heart } from "lucide-react";
 
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogTrigger,
+} from "./../components/ui/dialog";
+
+const CarDetails = () => {
+  //console.log("Pages >> Car details : ");
+  const { id } = useParams();
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  //nsole.log("Pages >> Car details : " + car.make);
+  //const favoritesSelector = useSelector((state: RootState) => state.favorites);
+  // selector
+
+  //const isFavorite = favoritesSelector.some((c) => c.id === car.id);
+  //console.log("isFavorite -- " + isFavorite);
+
+  const car = (cars as any[]).find((c) => String(c.id) === String(id));
+  const isFavorite = useSelector((state: RootState) =>
+    state.favorites.includes(car.id)
+  );
+  const { favorites, toggleFavorite } = useFavorites();
+  const { addToast } = useToast();
+
+  //console.log("Pages >> Car details : " + car.make);
 
   dispatch(addRecentlyViewed(car));
 
@@ -34,6 +56,8 @@ const CarDetails = () => {
   }
 
   const isFav = favorites.includes(car.id);
+  //const isFavorite = favorites.some((c) => c.id === car.id);
+
   const onFav = () => {
     const added = toggleFavorite(car.id);
     if (added) addToast("success", "Added to Favorites");
@@ -55,7 +79,7 @@ const CarDetails = () => {
             {car.mileage.toLocaleString()} mi • {car.fuel} • {car.transmission}
           </div>
           <div className="text-gray-400 text-sm">{car.location}</div>
-          <button
+          {/* <button
             onClick={onFav}
             className={`mt-4 rounded-xl px-4 py-2 ${
               isFav
@@ -64,18 +88,84 @@ const CarDetails = () => {
             }`}
           >
             {isFav ? "♥" : "♡"}
-          </button>
+          </button> */}
+          <Button
+            variant={isFavorite ? "default" : "outline"}
+            // onClick={() => dispatch(toggleFavorite)}
+            onClick={() =>
+              dispatch(
+                isFavorite ? removeFavorite(car.id) : addFavorite(car.id)
+              )
+            }
+            className="flex gap-2"
+          >
+            <Heart
+              className={`h-5 w-5 ${
+                isFavorite ? "fill-red-500 text-red-500" : ""
+              }`}
+            />
+            {isFavorite ? "Remove Favorite" : "Add to Favorites"}
+          </Button>
+          <br />
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 bg-gray-50 p-4 rounded-lg">
+            <Spec label="Engine" value={car.engine} />
+            <Spec label="Fuel Type" value={car.fuel} />
+            <Spec label="Transmission" value={car.transmission} />
+            <Spec label="Year" value={car.year} />
+            <Spec label="Mileage" value={`${car.mileage} miles`} />
+            <Spec label="Ownership" value={car.ownership} />
+          </div>
         </div>
-        <Link
+        {/* <Link
           // to={`/cars/${car.id}`}
           to=""
           //className="mt-auto inline-flex justify-center rounded-xl bg-gray-900 text-white px-4 py-2 hover:bg-gray-800"
           className=" rounded-full bg-sky-500 grid place-items-center text-white font-bold"
         >
           Buy
-        </Link>
+        </Link> */}
+
+        <Dialog>
+          <DialogTrigger asChild>
+            <Button className="bg-sky-600 hover:bg-green-700">Buy Now</Button>
+          </DialogTrigger>
+
+          <DialogContent>
+            <DialogHeader>
+              <DialogTitle>Purchase Request</DialogTitle>
+            </DialogHeader>
+
+            <p className="text-sm text-gray-600">
+              Thank you for your interest in the{" "}
+              <strong>
+                {car.year} {car.make} {car.model}
+              </strong>
+              .
+            </p>
+
+            <p className="mt-2 text-sm">
+              Our sales team will contact you shortly.
+            </p>
+
+            {/* <Button className="mt-4 w-full">Confirm</Button> */}
+          </DialogContent>
+        </Dialog>
       </div>
     </main>
   );
 };
+type SpecProps = {
+  label: string;
+  value: string | number;
+};
+
+function Spec({ label, value }: SpecProps) {
+  return (
+    <div>
+      <p className="text-sm text-gray-500">{label}</p>
+      <p className="font-semibold">{value}</p>
+    </div>
+  );
+}
+
 export default CarDetails;

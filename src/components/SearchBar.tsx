@@ -1,3 +1,4 @@
+// import { Button } from "./../components/ui/button";
 type Props = { value: string; onChange: (v: string) => void };
 const SearchBar = ({ value, onChange }: Props) => {
   return (
@@ -9,6 +10,7 @@ const SearchBar = ({ value, onChange }: Props) => {
         placeholder="Search by make, model, or year..."
         aria-label="Search cars"
       />
+      {/* <Button className="bg-sky-600 hover:bg-green-700">Search</Button> */}
     </div>
   );
 };

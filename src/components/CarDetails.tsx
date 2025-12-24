@@ -20,7 +20,7 @@ const CarDetails = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  console.log("Components >> Car details : " + car);
+  //console.log("Components >> Car details : " + car);
 
   dispatch(addRecentlyViewed(car));
 

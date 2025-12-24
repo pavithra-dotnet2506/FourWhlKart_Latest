@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
-import { useFavorites } from "./../context/FavoritesContext";
-import { useToast } from "./ToastProvider";
+// import { useFavorites } from "./../context/FavoritesContext";
+// import { useToast } from "./ToastProvider";
+
+import { useDispatch, useSelector } from "react-redux";
+import type { RootState } from "./../store";
+import { removeFavorite, addFavorite } from "./../store/favoritesSlice";
 
 type Car = {
   id: number;
@@ -16,15 +20,20 @@ type Car = {
 };
 
 const CarCard = ({ car }: { car: Car }) => {
-  const { favorites, toggleFavorite } = useFavorites();
-  const { addToast } = useToast();
-  const isFav = favorites.includes(car.id);
+  // const { favorites, toggleFavorite } = useFavorites();
+  // const { addToast } = useToast();
+  const dispatch = useDispatch();
+  const isFav = useSelector((state: RootState) =>
+    state.favorites.includes(car.id)
+  );
 
-  const onFav = () => {
-    const added = toggleFavorite(car.id);
-    if (added) addToast("success", "Added to Favorites");
-    else addToast("danger", "Removed from Favorites");
-  };
+  //const isFav = favorites.includes(car.id);
+
+  // const onFav = () => {
+  //   const added = toggleFavorite(car.id);
+  //   if (added) addToast("success", "Added to Favorites");
+  //   else addToast("danger", "Removed from Favorites");
+  // };
 
   return (
     <div className="bg-white rounded-2xl shadow-sm border overflow-hidden flex flex-col">
@@ -35,7 +44,10 @@ const CarCard = ({ car }: { car: Car }) => {
           className="h-48 w-full object-cover"
         />
         <button
-          onClick={onFav}
+          // onClick={onFav}
+          onClick={() =>
+            dispatch(isFav ? removeFavorite(car.id) : addFavorite(car.id))
+          }
           className={`absolute top-3 right-3 px-3 py-1 rounded-full text-sm font-medium ${
             isFav ? "bg-sky-600 text-white" : "bg-white/90 text-gray-800 border"
           }`}

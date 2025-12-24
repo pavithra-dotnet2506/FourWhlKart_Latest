@@ -1,13 +1,25 @@
-//import { useSearchParams } from "react-router-dom";
+import { useSearchParams } from "react-router-dom";
 import { useMemo, useState } from "react";
 import cars from "./../data/cars.json";
 import CarCard from "./../components/CarCard";
+import SearchBar from "./../components/SearchBar";
 
 const unique = (arr: string[]) => Array.from(new Set(arr)).sort();
 
 const Cars = () => {
-  // const [searchParams] = useSearchParams();
-  // const search = searchParams.get("search")?.toLowerCase() || "";
+  /**  Search Bar **/
+  // const [q, setQ] = useState("");
+
+  // const filtered = useMemo(() => {
+  //   return (cars as any[]).filter((c) => {
+  //     const text = `${c.make} ${c.model} ${c.year}`.toLowerCase();
+  //     return text.includes(q.toLowerCase());
+  //   });
+  // }, [q]);
+  /**  Search Bar **/
+
+  const [searchParams] = useSearchParams();
+  const search = searchParams.get("search")?.toLowerCase() || "";
 
   const allCars = cars as any[];
   const makes = unique(allCars.map((c) => c.make));
@@ -48,7 +60,10 @@ const Cars = () => {
   return (
     <main className="py-6">
       <div className="bg-white border rounded-2xl p-4 shadow-sm mb-6">
-        <div className="mb-4">{/* <SearchBar /> */}</div>
+        <div className="mb-4">
+          {/* <SearchBar /> */}
+          {/* <SearchBar value={q} onChange={setQ} /> */}
+        </div>
         <div className="grid md:grid-cols-5 gap-4">
           <div>
             <label className="text-xs text-gray-500">Make / Brand</label>

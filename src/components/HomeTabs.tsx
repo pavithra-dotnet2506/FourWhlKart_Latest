@@ -16,10 +16,18 @@ const HomeTabs = () => {
   const recentlyViewedCars = useSelector(
     (state: RootState) => state.recentlyViewed
   );
-  const { favorites } = useFavorites();
+
+  const favorites = useSelector((state: RootState) => state.favorites);
+
+  //console.log("favCars1 >> " + favCars1);
+
+  //const { favorites } = useFavorites();
+  //const favCars = (cars as any[]).filter((c) => favorites.includes(c.id));
   const favCars = (cars as any[]).filter((c) => favorites.includes(c.id));
 
-  const viewedCars = recentlyViewedCars.slice(0, 4);
+  const viewedCars = recentlyViewedCars.slice(0, 10);
+  console.log("viewedCars >> " + viewedCars.length);
+
   //console.log("**favCars** >> " + favCars[0].make);
 
   const favoriteCars = favCars.slice(0, 4);
@@ -69,9 +77,9 @@ const HomeTabs = () => {
 
       {/* Content */}
       <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 mt-6">
-        {getCars().map((car) => (
-          <CarCard key={car.id} car={car} />
-        ))}
+        {getCars().length > 0
+          ? getCars().map((car) => <CarCard key={car.id} car={car} />)
+          : "Sorry, No Cars to display."}
 
         {/* {getCars.length > 0
           ? getCars().map((car) => <CarCard key={car.id} car={car} />)
