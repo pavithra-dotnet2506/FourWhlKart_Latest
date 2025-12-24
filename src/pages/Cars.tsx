@@ -138,7 +138,19 @@ const Cars = () => {
           </div>
         </div>
       </div>
-      <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+      {/* Page Title */}
+      <h1 className="text-2xl font-bold mb-6">Available Cars</h1>
+
+      {/* <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-5"> */}
+      <div
+        className="
+          grid gap-6
+          grid-cols-1
+          sm:grid-cols-2
+          lg:grid-cols-3
+          xl:grid-cols-4
+        "
+      >
         {filtered.map((car) => (
           <CarCard key={car.id} car={car} />
         ))}

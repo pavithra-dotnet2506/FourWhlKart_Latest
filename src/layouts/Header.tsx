@@ -1,7 +1,7 @@
 import { Link, NavLink } from "react-router-dom";
 import { Avatar, AvatarFallback, AvatarImage } from "./../components/ui/avatar";
 import { Menu } from "lucide-react";
-import { Sheet, SheetTrigger, SheetContent } from "@/components/ui/sheet";
+import { Sheet, SheetTrigger, SheetContent } from "./../components/ui/sheet";
 
 import pcAvatar from "@/assets/PC_img.png";
 
@@ -23,6 +23,7 @@ const Header = () => {
               </div>
             </div>
           </Link>
+          {/* Desktop Nav */}
           <nav className="mx-auto hidden md:flex items-center gap-6">
             <NavLink to="/" end className={linkCls}>
               Home
@@ -82,11 +83,18 @@ const Header = () => {
               <SheetContent>
                 <div className="flex flex-col gap-4 mt-6">
                   <nav className="flex flex-col gap-4">
-                    <a href="/">Home</a>
+                    {/* <a href="/">Home</a>
                     <a href="/cars">Cars</a>
-                    {/* <a href="/favorites">Favorites</a> */}
                     <a href="/about">About</a>
-                    <a href="/contact">Contact</a>
+                    <a href="/contact">Contact</a> */}
+
+                    <NavLink to="/">Home</NavLink>
+                    <NavLink to="/cars">Cars</NavLink>
+                    {/* <a href="/favorites">Favorites</a> */}
+                    <NavLink to="/about">About</NavLink>
+                    <NavLink to="/contact">Contact</NavLink>
+
+                    {/* <NavLink to="/cars">Cars</NavLink> */}
                   </nav>
                 </div>
               </SheetContent>

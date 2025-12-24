@@ -19,7 +19,7 @@ const HomeTabs = () => {
 
   const favorites = useSelector((state: RootState) => state.favorites);
 
-  //console.log("favCars1 >> " + favCars1);
+  console.log("favCars1 >> " + favorites.length);
 
   //const { favorites } = useFavorites();
   //const favCars = (cars as any[]).filter((c) => favorites.includes(c.id));
@@ -28,9 +28,9 @@ const HomeTabs = () => {
   const viewedCars = recentlyViewedCars.slice(0, 10);
   console.log("viewedCars >> " + viewedCars.length);
 
-  //console.log("**favCars** >> " + favCars[0].make);
+  // console.log("**favCars** >> " + favCars);
 
-  const favoriteCars = favCars.slice(0, 4);
+  const favoriteCars = favorites.slice(0, 10);
   const searchedCars = cars.slice(8, 12);
   const recommendedCars = cars.slice(12, 16);
   // const searchedCars = cars.slice(4, 8);

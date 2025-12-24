@@ -24,7 +24,7 @@ const recentlyViewedSlice = createSlice({
       // add to front
       state.unshift(action.payload);
 
-      // keep max 5
+      // keep max 10
       if (state.length > 10) {
         state.pop();
       }

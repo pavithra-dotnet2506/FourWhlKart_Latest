@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 // import { useFavorites } from "./../context/FavoritesContext";
 // import { useToast } from "./ToastProvider";
+import { useNavigate } from "react-router-dom";
 
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "./../store";
@@ -17,6 +18,9 @@ type Car = {
   fuel: string;
   transmission: string;
   location: string;
+  engine: string;
+  ownership: string;
+  image: string;
 };
 
 const CarCard = ({ car }: { car: Car }) => {
@@ -24,7 +28,7 @@ const CarCard = ({ car }: { car: Car }) => {
   // const { addToast } = useToast();
   const dispatch = useDispatch();
   const isFav = useSelector((state: RootState) =>
-    state.favorites.includes(car.id)
+    state.favorites.includes(car)
   );
 
   //const isFav = favorites.includes(car.id);
@@ -34,26 +38,27 @@ const CarCard = ({ car }: { car: Car }) => {
   //   if (added) addToast("success", "Added to Favorites");
   //   else addToast("danger", "Removed from Favorites");
   // };
+  const navigate = useNavigate();
 
   return (
     <div className="bg-white rounded-2xl shadow-sm border overflow-hidden flex flex-col">
-      <div className="relative">
+      <div className="relative" onClick={() => navigate(`/cars/${car.id}`)}>
         <img
           src={car.images[0]}
           alt={`${car.make} ${car.model}`}
           className="h-48 w-full object-cover"
         />
-        <button
+        {/* <button
           // onClick={onFav}
           onClick={() =>
-            dispatch(isFav ? removeFavorite(car.id) : addFavorite(car.id))
+            dispatch(isFav ? removeFavorite(car) : addFavorite(car))
           }
           className={`absolute top-3 right-3 px-3 py-1 rounded-full text-sm font-medium ${
             isFav ? "bg-sky-600 text-white" : "bg-white/90 text-gray-800 border"
           }`}
         >
           {isFav ? "♥ Saved" : "♡ Save"}
-        </button>
+        </button> */}
       </div>
       <div className="p-4 flex-1 flex flex-col">
         <div className="flex items-baseline justify-between gap-2">

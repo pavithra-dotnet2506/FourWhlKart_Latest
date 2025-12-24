@@ -1,8 +1,8 @@
 import { useParams, Link } from "react-router-dom";
 import cars from "./../data/cars.json";
-import ImageCarousel from "./../components/ImageCarousel";
-import { useFavorites } from "./../context/FavoritesContext";
-import { useToast } from "./../components/ToastProvider";
+// import ImageCarousel from "./../components/ImageCarousel";
+// import { useFavorites } from "./../context/FavoritesContext";
+// import { useToast } from "./../components/ToastProvider";
 
 import { useDispatch, useSelector } from "react-redux";
 import { addRecentlyViewed } from "./../store/recentlyViewedSlice";
@@ -12,6 +12,7 @@ import type { RootState } from "./../store";
 import { removeFavorite, addFavorite } from "./../store/favoritesSlice";
 import { Button } from "./../components/ui/button";
 import { Heart } from "lucide-react";
+import CarImageCarousel from "./../components/CarImageCarousel";
 
 import {
   Dialog,
@@ -35,10 +36,10 @@ const CarDetails = () => {
 
   const car = (cars as any[]).find((c) => String(c.id) === String(id));
   const isFavorite = useSelector((state: RootState) =>
-    state.favorites.includes(car.id)
+    state.favorites.includes(car)
   );
-  const { favorites, toggleFavorite } = useFavorites();
-  const { addToast } = useToast();
+  // const { favorites, toggleFavorite } = useFavorites();
+  // const { addToast } = useToast();
 
   //console.log("Pages >> Car details : " + car.make);
 
@@ -55,19 +56,24 @@ const CarDetails = () => {
     );
   }
 
-  const isFav = favorites.includes(car.id);
-  //const isFavorite = favorites.some((c) => c.id === car.id);
+  // const isFav = favorites.includes(car.id);
+  // //const isFavorite = favorites.some((c) => c.id === car.id);
 
-  const onFav = () => {
-    const added = toggleFavorite(car.id);
-    if (added) addToast("success", "Added to Favorites");
-    else addToast("danger", "Removed from Favorites");
-  };
+  // const onFav = () => {
+  //   const added = toggleFavorite(car.id);
+  //   if (added) addToast("success", "Added to Favorites");
+  //   else addToast("danger", "Removed from Favorites");
+  // };
 
   return (
     <main className="py-6">
       <div className="grid lg:grid-cols-2 gap-6">
-        <ImageCarousel images={car.images} />
+        {/* <ImageCarousel images={car.images} /> */}
+
+        <CarImageCarousel
+          images={car.images}
+          title={`${car.make} ${car.model}`}
+        />
         <div>
           <h1 className="text-2xl md:text-3xl font-bold">
             {car.year} {car.make} {car.model}
@@ -93,9 +99,7 @@ const CarDetails = () => {
             variant={isFavorite ? "default" : "outline"}
             // onClick={() => dispatch(toggleFavorite)}
             onClick={() =>
-              dispatch(
-                isFavorite ? removeFavorite(car.id) : addFavorite(car.id)
-              )
+              dispatch(isFavorite ? removeFavorite(car) : addFavorite(car))
             }
             className="flex gap-2"
           >
@@ -124,7 +128,6 @@ const CarDetails = () => {
         >
           Buy
         </Link> */}
-
         <Dialog>
           <DialogTrigger asChild>
             <Button className="bg-sky-600 hover:bg-green-700">Buy Now</Button>
