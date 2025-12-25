@@ -13,6 +13,7 @@ import { removeFavorite, addFavorite } from "./../store/favoritesSlice";
 import { Button } from "./../components/ui/button";
 import { Heart } from "lucide-react";
 import CarImageCarousel from "./../components/CarImageCarousel";
+import { motion } from "framer-motion";
 
 import {
   Dialog,
@@ -91,11 +92,15 @@ const CarDetails = () => {
     <main className="py-6">
       <div className="grid lg:grid-cols-2 gap-6">
         {/* <ImageCarousel images={car.images} /> */}
-
-        <CarImageCarousel
-          images={car.images}
-          title={`${car.make} ${car.model}`}
-        />
+        <motion.div
+          whileHover={{ y: -4 }}
+          transition={{ type: "spring", stiffness: 300, damping: 20 }}
+        >
+          <CarImageCarousel
+            images={car.images}
+            title={`${car.make} ${car.model}`}
+          />
+        </motion.div>
         <div>
           <h1 className="text-2xl md:text-3xl font-bold">
             {car.year} {car.make} {car.model}
@@ -125,11 +130,19 @@ const CarDetails = () => {
             }
             className="flex gap-2"
           >
-            <Heart
+            {/* <Heart
               className={`h-5 w-5 ${
                 isFavorite ? "fill-red-500 text-red-500" : ""
               }`}
+            /> */}
+            <Heart
+              className={`h-5 w-5 transition ${
+                isFavorite
+                  ? "fill-red-500 text-red-500 scale-110"
+                  : "text-muted-foreground"
+              }`}
             />
+
             {isFavorite ? "Remove Favorite" : "Add to Favorites"}
           </Button>
           <Button

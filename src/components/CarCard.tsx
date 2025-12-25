@@ -44,10 +44,19 @@ const CarCard = ({ car }: { car: Car }) => {
     <div className="bg-white rounded-2xl shadow-sm border overflow-hidden flex flex-col">
       {/* <div className="relative" onClick={() => navigate(`/cars/${car.id}`)}> */}
       <div className="relative">
+        {/* <div
+        className="
+    rounded-xl border bg-card
+    shadow-sm hover:shadow-lg
+    transition-all duration-300
+    hover:-translate-y-1
+  "
+      > */}
         <img
+          className="h-48 w-full object-cover transition-transform duration-300 hover:scale-105"
           src={car.images[0]}
           alt={`${car.make} ${car.model}`}
-          className="h-48 w-full object-cover"
+          // className="h-48 w-full object-cover"
           onClick={() => navigate(`/cars/${car.id}`)}
         />
         <button
