@@ -1,13 +1,14 @@
 import { useState } from "react";
 import CarCard from "./CarCard";
 import allCars from "./../data/cars.json";
-import RecentlyViewed from "@/components/RecentlyViewed";
-import { useFavorites } from "./../context/FavoritesContext";
+//import RecentlyViewed from "@/components/RecentlyViewed";
+//import { useFavorites } from "./../context/FavoritesContext";
 
 import { useSelector } from "react-redux";
 import type { RootState } from "../store";
 
-type Tab = "viewed" | "favorites" | "searched" | "recommended";
+type Tab = "viewed" | "favorites" | "recommended";
+//type Tab = "viewed" | "favorites" | "searched" | "recommended";
 //type Tab = "viewed" | "searched" | "recommended";
 
 const HomeTabs = () => {
@@ -19,20 +20,20 @@ const HomeTabs = () => {
 
   const favorites = useSelector((state: RootState) => state.favorites);
 
-  console.log("favCars1 >> " + favorites.length);
+  //console.log("favCars1 >> " + favorites.length);
 
   //const { favorites } = useFavorites();
   //const favCars = (cars as any[]).filter((c) => favorites.includes(c.id));
   const favCars = (cars as any[]).filter((c) => favorites.includes(c.id));
 
   const viewedCars = recentlyViewedCars.slice(0, 10);
-  console.log("viewedCars >> " + viewedCars.length);
+  //console.log("viewedCars >> " + viewedCars.length);
 
   // console.log("**favCars** >> " + favCars);
 
   const favoriteCars = favorites.slice(0, 10);
-  const searchedCars = cars.slice(8, 12);
-  const recommendedCars = cars.slice(12, 16);
+  //const searchedCars = cars.slice(8, 12);
+  const recommendedCars = cars.slice(0, 4);
   // const searchedCars = cars.slice(4, 8);
   // const recommendedCars = cars.slice(8, 12);
 
@@ -42,8 +43,8 @@ const HomeTabs = () => {
         return viewedCars;
       case "favorites":
         return favoriteCars;
-      case "searched":
-        return searchedCars;
+      // case "searched":
+      //   return searchedCars;
       case "recommended":
         return recommendedCars;
     }
@@ -63,11 +64,11 @@ const HomeTabs = () => {
           active={activeTab === "favorites"}
           onClick={() => setActiveTab("favorites")}
         />
-        <TabButton
+        {/* <TabButton
           label="Searched"
           active={activeTab === "searched"}
           onClick={() => setActiveTab("searched")}
-        />
+        /> */}
         <TabButton
           label="You Might Like"
           active={activeTab === "recommended"}

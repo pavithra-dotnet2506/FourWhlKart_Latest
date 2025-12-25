@@ -12,7 +12,7 @@ const About = () => {
     <div className="container mx-auto px-4 py-10 max-w-6xl">
       {/* Page Header */}
       <div className="mb-10 text-center">
-        <h1 className="text-4xl font-bold tracking-tight">About FourWhlKart</h1>
+        <h1 className="text-4xl font-bold tracking-tight">About Us</h1>
         <p className="mt-3 text-muted-foreground max-w-3xl mx-auto">
           FourWhlKart is a modern used-car marketplace designed to make buying
           and selling cars simple, transparent, and trustworthy.
@@ -30,10 +30,10 @@ const About = () => {
           </CardTitle>
         </CardHeader>
         <CardContent className="text-muted-foreground leading-relaxed">
-          FourWhlKart is a full-stack web application built using React,
-          TypeScript, Tailwind CSS, and .NET Core Web API. The platform connects
-          buyers and sellers of used vehicles by providing detailed listings,
-          real-time search and filtering, favorites, and secure authentication.
+          FourWhlKart is an E-Commerce application built using React, TypeScript
+          and Tailwind CSS. The platform connects buyers and sellers of used
+          vehicles by providing detailed listings, real-time search and
+          filtering, favorites, and secure authentication.
           <br />
           <br />
           Our goal is to remove friction from the used-car experience and
@@ -73,7 +73,7 @@ const About = () => {
       </div>
 
       {/* Team Section */}
-      <Card>
+      {/* <Card>
         <CardHeader>
           <CardTitle className="flex items-center gap-2">
             <Users className="h-5 w-5 text-purple-600" />
@@ -91,7 +91,7 @@ const About = () => {
           backend development — making it both a functional product and a
           portfolio-grade application.
         </CardContent>
-      </Card>
+      </Card> */}
     </div>
   );
 };

@@ -1,6 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import cars from "./../data/cars.json";
-import ImageCarousel from "./../components/ImageCarousel";
+//import ImageCarousel from "./../components/ImageCarousel";
 import { useFavorites } from "./../context/FavoritesContext";
 import { useToast } from "./../components/ToastProvider";
 
@@ -8,12 +8,19 @@ import { useDispatch } from "react-redux";
 //import { addRecentlyViewed } from "@/store/recentlyViewedSlice";
 import { addRecentlyViewed } from "../store/recentlyViewedSlice";
 import { useNavigate } from "react-router-dom";
+import { Button } from "./../components/ui/button";
+import CarImageCarousel from "./CarImageCarousel";
 
 const CarDetails = () => {
-  console.log("Components >> Car details");
+  //console.log("Components >> Car details");
 
   const { id } = useParams();
   const car = (cars as any[]).find((c) => String(c.id) === String(id));
+
+  // if (!id || isNaN(Number(id))) {
+  //   return <NotFound />;
+  // }
+
   const { favorites, toggleFavorite } = useFavorites();
   const { addToast } = useToast();
 
@@ -22,19 +29,38 @@ const CarDetails = () => {
 
   //console.log("Components >> Car details : " + car);
 
-  dispatch(addRecentlyViewed(car));
-
   if (!car) {
     return (
       <div className="py-10">
-        <p className="text-red-600">Car not found.</p>
-        <Link className="text-sky-600 underline" to="/">
-          Back to Home
-        </Link>
+        {/* <h1 className="text-6xl font-bold text-red-600">404</h1> */}
+        <p className="text-muted-foreground text-red-600">
+          Oops!!! Something was incorrect. Please Re-check and try again...
+        </p>
+        {/* <Button className="bg-sky-500" asChild>
+          <Link to="/">Go Home</Link>
+        </Button> */}
+        <Button
+          variant="default"
+          onClick={() => navigate(-1)}
+          className="bg-sky-600 hover:bg-green-700"
+        >
+          Back
+        </Button>
       </div>
     );
   }
 
+  // if (!car) {
+  //   return (
+  //     <div className="py-10">
+  //       <p className="text-red-600">Car not found.</p>
+  //       <Link className="text-sky-600 underline" to="/">
+  //         Back to Home
+  //       </Link>
+  //     </div>
+  //   );
+  // }
+  dispatch(addRecentlyViewed(car));
   const isFav = favorites.includes(car.id);
   const onFav = () => {
     const added = toggleFavorite(car.id);
@@ -45,7 +71,7 @@ const CarDetails = () => {
   return (
     <main className="py-6">
       <div className="grid lg:grid-cols-2 gap-6">
-        <ImageCarousel images={car.images} />
+        <CarImageCarousel images={car.images} />
         <div>
           <h1 className="text-2xl md:text-3xl font-bold">
             {car.year} {car.make} {car.model}

@@ -42,13 +42,15 @@ const CarCard = ({ car }: { car: Car }) => {
 
   return (
     <div className="bg-white rounded-2xl shadow-sm border overflow-hidden flex flex-col">
-      <div className="relative" onClick={() => navigate(`/cars/${car.id}`)}>
+      {/* <div className="relative" onClick={() => navigate(`/cars/${car.id}`)}> */}
+      <div className="relative">
         <img
           src={car.images[0]}
           alt={`${car.make} ${car.model}`}
           className="h-48 w-full object-cover"
+          onClick={() => navigate(`/cars/${car.id}`)}
         />
-        {/* <button
+        <button
           // onClick={onFav}
           onClick={() =>
             dispatch(isFav ? removeFavorite(car) : addFavorite(car))
@@ -58,7 +60,7 @@ const CarCard = ({ car }: { car: Car }) => {
           }`}
         >
           {isFav ? "♥ Saved" : "♡ Save"}
-        </button> */}
+        </button>
       </div>
       <div className="p-4 flex-1 flex flex-col">
         <div className="flex items-baseline justify-between gap-2">

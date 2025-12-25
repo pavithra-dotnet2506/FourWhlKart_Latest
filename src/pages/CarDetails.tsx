@@ -35,6 +35,28 @@ const CarDetails = () => {
   //console.log("isFavorite -- " + isFavorite);
 
   const car = (cars as any[]).find((c) => String(c.id) === String(id));
+
+  if (!car) {
+    return (
+      <div className="py-10">
+        {/* <h1 className="text-6xl font-bold text-red-600">404</h1> */}
+        <p className="text-muted-foreground text-red-600">
+          Oops!!! Something was incorrect. Please Re-check and try again...
+        </p>
+        {/* <Button className="bg-sky-500" asChild>
+          <Link to="/">Go Home</Link>
+        </Button> */}
+        <Button
+          variant="default"
+          onClick={() => navigate(-1)}
+          className="bg-sky-600 hover:bg-green-700"
+        >
+          Back
+        </Button>
+      </div>
+    );
+  }
+
   const isFavorite = useSelector((state: RootState) =>
     state.favorites.includes(car)
   );
@@ -45,16 +67,16 @@ const CarDetails = () => {
 
   dispatch(addRecentlyViewed(car));
 
-  if (!car) {
-    return (
-      <div className="py-10">
-        <p className="text-red-600">Car not found.</p>
-        <Link className="text-sky-600 underline" to="/">
-          Back to Home
-        </Link>
-      </div>
-    );
-  }
+  // if (!car) {
+  //   return (
+  //     <div className="py-10">
+  //       <p className="text-red-600">Car not found.</p>
+  //       <Link className="text-sky-600 underline" to="/">
+  //         Back to Home
+  //       </Link>
+  //     </div>
+  //   );
+  // }
 
   // const isFav = favorites.includes(car.id);
   // //const isFavorite = favorites.some((c) => c.id === car.id);
@@ -109,6 +131,13 @@ const CarDetails = () => {
               }`}
             />
             {isFavorite ? "Remove Favorite" : "Add to Favorites"}
+          </Button>
+          <Button
+            variant="default"
+            onClick={() => navigate(-1)}
+            className="bg-sky-600 hover:bg-green-700"
+          >
+            Back
           </Button>
           <br />
           <div className="grid grid-cols-2 md:grid-cols-3 gap-4 bg-gray-50 p-4 rounded-lg">
