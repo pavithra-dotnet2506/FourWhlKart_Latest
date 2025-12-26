@@ -1,5 +1,6 @@
-import { useSearchParams } from "react-router-dom";
-import { useMemo, useState } from "react";
+//import { useSearchParams } from "react-router-dom";
+//import { useMemo, useState } from "react";
+import { useState } from "react";
 import cars from "./../data/cars.json";
 import CarCard from "./../components/CarCard";
 import {
@@ -13,7 +14,7 @@ import {
 
 //import SearchBar from "./../components/SearchBar";
 
-const unique = (arr: string[]) => Array.from(new Set(arr)).sort();
+//const unique = (arr: string[]) => Array.from(new Set(arr)).sort();
 
 const Cars = () => {
   /**  Search Bar **/
@@ -27,8 +28,8 @@ const Cars = () => {
   // }, [q]);
   /**  Search Bar **/
 
-  const [searchParams] = useSearchParams();
-  const search = searchParams.get("search")?.toLowerCase() || "";
+  // const [searchParams] = useSearchParams();
+  // const search = searchParams.get("search")?.toLowerCase() || "";
 
   const allCars = cars as any[];
   // START - Pagination
@@ -39,39 +40,43 @@ const Cars = () => {
   const startIndex = (currentPage - 1) * ITEMS_PER_PAGE;
   const paginatedCars = allCars.slice(startIndex, startIndex + ITEMS_PER_PAGE);
   // END - Pagination
-  const makes = unique(allCars.map((c) => c.make));
-  const fuels = unique(allCars.map((c) => c.fuel));
-  const transmissions = unique(allCars.map((c) => c.transmission));
-  const maxPrice = Math.max(...allCars.map((c) => c.price));
-  const maxMileage = Math.max(...allCars.map((c) => c.mileage));
+  /**** */
+  // const makes = unique(allCars.map((c) => c.make));
+  // const fuels = unique(allCars.map((c) => c.fuel));
+  // const transmissions = unique(allCars.map((c) => c.transmission));
+  // const maxPrice = Math.max(...allCars.map((c) => c.price));
+  // const maxMileage = Math.max(...allCars.map((c) => c.mileage));
 
-  const [make, setMake] = useState("All");
-  const [fuel, setFuel] = useState("All");
-  const [trans, setTrans] = useState("All");
-  const [price, setPrice] = useState(maxPrice);
-  const [mileage, setMileage] = useState(maxMileage);
-
+  // const [make, setMake] = useState("All");
+  // const [fuel, setFuel] = useState("All");
+  // const [trans, setTrans] = useState("All");
+  // const [price, setPrice] = useState(maxPrice);
+  // const [mileage, setMileage] = useState(maxMileage);
+  /**** */
   // if (search) {
   //   const filtered = cars.filter((car) =>
   //     `${car.make} ${car.model} ${car.year}`.toLowerCase().includes(search)
   //   );
   // } else {
-  const filtered = useMemo(
-    () =>
-      allCars.filter((c) => {
-        const okMake = make === "All" || c.make === make;
-        const okFuel = fuel === "All" || c.fuel === fuel;
-        const okTrans = trans === "All" || c.transmission === trans;
-        return (
-          okMake &&
-          okFuel &&
-          okTrans &&
-          c.price <= price &&
-          c.mileage <= mileage
-        );
-      }),
-    [allCars, make, fuel, trans, price, mileage]
-  );
+
+  // ****/
+  //   const filtered = useMemo(
+  //   () =>
+  //     allCars.filter((c) => {
+  //       const okMake = make === "All" || c.make === make;
+  //       const okFuel = fuel === "All" || c.fuel === fuel;
+  //       const okTrans = trans === "All" || c.transmission === trans;
+  //       return (
+  //         okMake &&
+  //         okFuel &&
+  //         okTrans &&
+  //         c.price <= price &&
+  //         c.mileage <= mileage
+  //       );
+  //     }),
+  //   [allCars, make, fuel, trans, price, mileage]
+  // );
+  //****** */
   //}
 
   return (

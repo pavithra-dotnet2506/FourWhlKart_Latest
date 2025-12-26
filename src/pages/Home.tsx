@@ -1,19 +1,19 @@
-import { useMemo, useState } from "react";
-import SearchBar from "./../components/SearchBar";
-import CarCard from "./../components/CarCard";
-import cars from "./../data/cars.json";
+// import { useMemo, useState } from "react";
+// import SearchBar from "./../components/SearchBar";
+// import CarCard from "./../components/CarCard";
+// import cars from "./../data/cars.json";
 import HomeTabs from "./../components/HomeTabs";
-import RecentlyViewed from "./../components/RecentlyViewed";
+// import RecentlyViewed from "./../components/RecentlyViewed";
 
 const Home = () => {
-  const [q, setQ] = useState("");
+  // const [q, setQ] = useState("");
 
-  const filtered = useMemo(() => {
-    return (cars as any[]).filter((c) => {
-      const text = `${c.make} ${c.model} ${c.year}`.toLowerCase();
-      return text.includes(q.toLowerCase());
-    });
-  }, [q]);
+  // const filtered = useMemo(() => {
+  //   return (cars as any[]).filter((c) => {
+  //     const text = `${c.make} ${c.model} ${c.year}`.toLowerCase();
+  //     return text.includes(q.toLowerCase());
+  //   });
+  // }, [q]);
 
   return (
     <main className="py-4 md:py-6">

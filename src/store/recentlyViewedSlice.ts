@@ -1,12 +1,28 @@
 import { createSlice } from "@reduxjs/toolkit";
 import type { PayloadAction } from "@reduxjs/toolkit";
 
+// export type Car = {
+//   id: number;
+//   make: string;
+//   model: string;
+//   year: number;
+//   price: number;
+//   image: string;
+// };
+
 export type Car = {
   id: number;
   make: string;
   model: string;
   year: number;
   price: number;
+  images: string[];
+  mileage: number;
+  fuel: string;
+  transmission: string;
+  location: string;
+  engine: string;
+  ownership: string;
   image: string;
 };
 

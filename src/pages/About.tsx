@@ -5,7 +5,7 @@ import {
   CardTitle,
 } from "./../components/ui/card";
 import { Separator } from "./../components/ui/separator";
-import { Users, Target, Eye, Car } from "lucide-react";
+import { Target, Eye, Car } from "lucide-react";
 
 const About = () => {
   return (

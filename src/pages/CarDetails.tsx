@@ -1,4 +1,4 @@
-import { useParams, Link } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import cars from "./../data/cars.json";
 // import ImageCarousel from "./../components/ImageCarousel";
 // import { useFavorites } from "./../context/FavoritesContext";

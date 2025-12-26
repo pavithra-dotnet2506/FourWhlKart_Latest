@@ -24,7 +24,7 @@ const HomeTabs = () => {
 
   //const { favorites } = useFavorites();
   //const favCars = (cars as any[]).filter((c) => favorites.includes(c.id));
-  const favCars = (cars as any[]).filter((c) => favorites.includes(c.id));
+  //const favCars = (cars as any[]).filter((c) => favorites.includes(c.id));
 
   const viewedCars = recentlyViewedCars.slice(0, 10);
   //console.log("viewedCars >> " + viewedCars.length);
